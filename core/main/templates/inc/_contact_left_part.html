@@ -1,0 +1,28 @@
+<form id="contact" action="" method="post">
+    {% csrf_token %}
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="section-heading">
+                  <h2>{{ home_contact_get.title1 }}<br><em>{{ home_contact_get.title2 }}</em>!</h2>
+              </div>
+          </div>
+          <div class="col-lg-6">                 
+              <input name="user_name" type="text" id="name" placeholder="{{ home_contact_get.name }}" required="">               
+          </div>
+          <div class="col-lg-6">                
+              <input name="user_surname" type="text" id="last-name" placeholder="{{ home_contact_get.surname }}*" required="">                           
+          </div>
+          <div class="col-lg-6">                       
+              <input name="user_email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="{{ home_contact_get.email }}" required="">                        
+          </div>
+          <div class="col-lg-6">                         
+              <input name="user_subject" type="text" id="subject" placeholder="{{ home_contact_get.subject }}*" required="">                        
+          </div>
+          <div class="col-lg-12">                           
+              <textarea name="user_message" type="text" class="form-control" id="message" placeholder="{{ home_contact_get.message }}" required=""></textarea>                          
+          </div>
+          <div class="col-lg-12">
+              <button type="submit" id="form-submit" class="main-button ">{{ home_contact_get.btn_name }}</button>                            
+          </div>
+      </div>
+  </form>
